@@ -40,7 +40,7 @@ To reduce potential **data leakage** from near-duplicate images across splits, w
 
 ## Methodology
 
-### 1Data Preparation
+### Data Preparation
 
 * Scan image folders to get file paths and class labels.
 * Compute **pHash** for each image.
