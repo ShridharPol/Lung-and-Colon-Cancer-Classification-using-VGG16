@@ -6,6 +6,10 @@ This project implements a deep learning pipeline using **VGG16** to classify his
 We worked with the [LC25000 dataset](https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images), which contains augmented images generated from a relatively small set of originals.
 To reduce potential **data leakage** from near-duplicate images across splits, we applied **Perceptual Hashing (pHash)** to detect and remove visually similar images.
 
+**Problem:** The LC25000 dataset contains augmented images with near-duplicates, risking data leakage and overestimated accuracy.  
+**Solution:** Applied Perceptual Hashing (pHash) to remove visually similar images before training a VGG16 classifier.  
+**Outcome:** Reduced data leakage risk and achieved more reliable performance metrics (accuracy: ~98% on a truly independent test set).
+
 ---
 
 ## Why pHash Filtering?
